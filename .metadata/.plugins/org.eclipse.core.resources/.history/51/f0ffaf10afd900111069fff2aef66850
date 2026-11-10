@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class StudentManagementSys {
+	private static final int MAX_CAPACITY = 5;
+	private static Student[] students = new Student[MAX_CAPACITY];
+	private static int count;
+	
+	public static void addStudent() {
+		Scanner input = new Scanner(System.in);
+		while (MAX_CAPACITY > count) {
+			Student s = new Student();
+			System.out.printf("Enter Student Id: ");
+			int id = input.nextInt();
+			if(searchStudentById(id) != -1) {
+				System.out.println("Student ID already exists. Please enter a different ID");
+				break;
+			}
+			s.setId(id);
+			s.getInput();
+		}
+	}
+	
+	public static int searchStudentById(int id) {
+		int searched;
+		for(int i = 0; i <= count; i++) {
+			searched = students[i].getId();
+			if(searched == id)
+				return i;
+		}
+		return -1;
+	}
+}

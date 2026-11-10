@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;StudentManagementSys&apos; to &apos;StudentManagementSystem&apos;&#x0A;- Original project: &apos;LG9-q1&apos;&#x0A;- Original element: &apos;StudentManagementSys&apos;&#x0A;- Renamed element: &apos;StudentManagementSystem&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;StudentManagementSys&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{StudentManagementSys.java[StudentManagementSys" matchStrategy="1" name="StudentManagementSystem" qualified="false" references="true" similarDeclarations="false" stamp="1794329264576" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		StudentManagementSys.addStudent();
+		StudentManagementSys.display();
+		int searched;
+		System.out.printf("Which student would you like to search? Enter his/her id: ");
+		searched = input.nextInt();
+		System.out.println("Here is a student you were looking for...");
+		int searchedIndex = StudentManagementSys.searchStudentById(searched);
+		
+	}
+
+}

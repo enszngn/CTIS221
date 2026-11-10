@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class Student {
+	private String name;
+	private int id;
+	private double gpa;
+	private boolean hasScholarship;
+	
+	public Student() {
+	}
+	
+	public void getInput() {
+		Scanner input = new Scanner();
+		if(scholarship.equalsIgnoreCase("y"))
+			hasScholarship = true;
+		else
+			hasScholarship = false;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getGpa() {
+		return gpa;
+	}
+
+	public void setGpa(double gpa) {
+		this.gpa = gpa;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public boolean isHasScholarship() {
+		return hasScholarship;
+	}
+
+	@Override
+	public String toString() {
+		String temp = "Student [name=" + name + ", id=" + id + ", gpa=" + gpa;
+		if (hasScholarship)
+			temp += ", hasScholarship=" + hasScholarship + "]";
+		return temp;
+	}
+	
+	
+	
+}

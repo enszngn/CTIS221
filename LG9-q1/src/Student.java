@@ -1,0 +1,69 @@
+import java.util.Scanner;
+
+public class Student {
+	private String name;
+	private int id;
+	private double gpa;
+	private boolean hasScholarship;
+	
+	public Student() {
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getGpa() {
+		return gpa;
+	}
+
+	public void setGpa(double gpa) {
+		this.gpa = gpa;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public boolean getHasScholarship() {
+		return hasScholarship;
+	}
+
+	public String toString() {
+		String temp = "Student Name=" + name + ",\n Id=" + id + ",\n Gpa=" + gpa + ",\n Scholarship Status=";
+		if (hasScholarship)
+			temp += "Student has scholarship.";
+		else
+			temp += "No scholarship.";
+		return temp;
+	}
+	
+	
+	public void getInput() {
+		Scanner input = new Scanner(System.in);
+		/*System.out.printf("Enter Student Id: ");
+		int id = input.nextInt();
+		setId(id);*/
+		System.out.printf("Enter Student Name: ");
+		String name = input.nextLine();
+		this.name = name;
+		System.out.printf("Enter Student Gpa: ");
+		double gpa = input.nextDouble();
+		setGpa(gpa);
+		System.out.printf("Does student has scholarship? (Y/N): ");
+		String scholarship = input.next();
+		while(scholarship.equalsIgnoreCase("y") || scholarship.equalsIgnoreCase("n")) {
+			System.out.printf("Wrong input, enter again (Y/N): ");
+			scholarship = input.next();
+		}
+		if(scholarship.equalsIgnoreCase("y"))
+			hasScholarship = true;
+		else
+			hasScholarship = false;
+	}
+	
+}

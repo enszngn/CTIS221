@@ -1,0 +1,65 @@
+import java.util.Scanner;
+
+public class Student {
+	private String name;
+	private int id;
+	private double gpa;
+	private boolean hasScholarship;
+	
+	public Student() {
+	}
+	
+	public void getInput() {
+		Scanner input = new Scanner(System.in);
+		/*System.out.printf("Enter Student Id: ");
+		int id = input.nextInt();
+		setId(id);*/
+		System.out.printf("Enter Student Name: ");
+		String name = input.next();
+		name = this.name;
+		System.out.printf("Enter Student Gpa: ");
+		double gpa = input.nextDouble();
+		setGpa(gpa);
+		System.out.printf("Does student has scholarship? (Y/N): ");
+		String scholarship = input.next();
+		if(scholarship.equalsIgnoreCase("y"))
+			hasScholarship = true;
+		else
+			hasScholarship = false;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public double getGpa() {
+		return gpa;
+	}
+
+	public void setGpa(double gpa) {
+		this.gpa = gpa;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public boolean getHasScholarship() {
+		return hasScholarship;
+	}
+
+	@Override
+	public String toString() {
+		String temp = "Student [name=" + name + ", id=" + id + ", gpa=" + gpa;
+		if (hasScholarship)
+			temp += ", hasScholarship=" + hasScholarship + "]";
+		return temp;
+	}
+	
+	
+	
+}
